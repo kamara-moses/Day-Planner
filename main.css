@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: auto;
+    height: auto;
+}
+
+.jumbotron  {
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Kaushan Script', cursive;
+    font-size: xx-large;
+    color: white;
+    background-color: rgb(135, 193, 216);
+}
