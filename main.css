@@ -6,14 +6,33 @@
 
 body {
     width: auto;
-    height: auto;
+    height: 100%;
 }
 
 .jumbotron  {
     text-align: center;
-    vertical-align: middle;
     font-family: 'Kaushan Script', cursive;
     font-size: xx-large;
     color: white;
     background-color: rgb(135, 193, 216);
+    border-bottom: 2px solid blue;
+    
 }
+
+.time-block {
+    border-radius: 20px;
+    border-top: 1px solid rgb(135, 193, 216);
+    text-align: center;
+    height: 100px;
+}
+
+ .btn {
+     background-color: rgb(135, 193, 216);
+     border-radius: 20px;
+ }
+
+ .description {
+     background-color: lightsteelblue;
+     border-radius: 20px;
+     color: white;
+ }
