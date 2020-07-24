@@ -3,10 +3,10 @@ $(document).ready(function () {
 
     $('.saveBtn').on('click', function () {
         var time = $(this).parent().attr('id');
-        var text = $(this).siblings('.input').val();
+        var activity = $(this).siblings('.input').val();
         
         console.log(time, text);
-        localStorage.setItem(time, text);
+        localStorage.setItem(time, activity);
     })
     function timeTracker() {
         //get current number of hours.
