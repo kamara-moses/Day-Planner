@@ -4,9 +4,9 @@ $(document).ready(function () {
     setInterval(getDate);
 
     function getDate() {
-        $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));  
-    }1000;
-    
+        $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));
+    } 1000;
+
     colorSchedule();
 
     function colorSchedule() {
@@ -31,8 +31,8 @@ $(document).ready(function () {
     };
     renderStoredInputs();
 
-    function renderStoredInputs(){
-        $('.input').each(function(){
+    function renderStoredInputs() {
+        $('.input').each(function () {
             var inputId = $(this).attr('id');
             $(this).val(localStorage.getItem(inputId));
         });
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
         localStorage.setItem(time, text);
     });
-    
+
     $('#9 .input').val(localStorage.getItem('9'));
     $('#10 .input').val(localStorage.getItem('10'));
     $('#11 .input').val(localStorage.getItem('11'));
