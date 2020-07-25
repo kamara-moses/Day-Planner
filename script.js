@@ -1,3 +1,4 @@
+//set the correct date and time
 $(document).ready(function () {
     var currentHour = moment().hour();
 
@@ -6,7 +7,8 @@ $(document).ready(function () {
     function getDate() {
         $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));
     } 1000;
-
+    
+//comparing the hour and setting the color according to past, present and future activities
     colorSchedule();
 
     function colorSchedule() {
@@ -29,6 +31,16 @@ $(document).ready(function () {
             } 1000;
         });
     };
+
+//save the users inputs to localStorage under time and text variables
+    $('.saveBtn').on('click', function () {
+        var time = $(this).parent().attr('id');
+        var text = $(this).siblings('.input').val();
+
+        localStorage.setItem(time, text);
+    });
+
+//stores the users input to localStorage to be called later
     renderStoredInputs();
 
     function renderStoredInputs() {
@@ -38,13 +50,7 @@ $(document).ready(function () {
         });
     };
 
-    $('.saveBtn').on('click', function () {
-        var time = $(this).parent().attr('id');
-        var text = $(this).siblings('.input').val();
-
-        localStorage.setItem(time, text);
-    });
-
+//calls up the stored user input from the saveBtn function
     $('#9 .input').val(localStorage.getItem('9'));
     $('#10 .input').val(localStorage.getItem('10'));
     $('#11 .input').val(localStorage.getItem('11'));
