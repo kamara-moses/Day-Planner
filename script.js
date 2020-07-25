@@ -1,10 +1,13 @@
 $(document).ready(function () {
     var currentHour = moment().hour();
 
+    setInterval(getDate);
+
     function getDate() {
         $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));  
-    };
+    }1000;
     
+    colorSchedule();
 
     function colorSchedule() {
         $('.time-block').each(function () {
@@ -23,9 +26,11 @@ $(document).ready(function () {
                 $(this).addClass('future');
                 $(this).removeClass('past');
                 $(this).removeClass('present');
-            };
+            } 1000;
         });
     };
+    renderStoredInputs();
+
     function renderStoredInputs(){
         $('.input').each(function(){
             var inputId = $(this).attr('id');
@@ -39,10 +44,7 @@ $(document).ready(function () {
 
         localStorage.setItem(time, text);
     });
-    setInterval(getDate,1000);
-    colorSchedule();
-    setInterval(colorSchedule,1000);
-    renderStoredInputs();
+    
     $('#9 .input').val(localStorage.getItem('9'));
     $('#10 .input').val(localStorage.getItem('10'));
     $('#11 .input').val(localStorage.getItem('11'));
