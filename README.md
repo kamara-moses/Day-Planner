@@ -10,7 +10,7 @@ The user can put activities in each of the timeblocks and save it to localStorag
 The activity will be store for later viewing, so the user will not forget what they had to do.
 If the user refreshers the webpage, the activity will stil be available due to it being store in the localStorage.
 
-<img src='image/Work Day Scheduler.png' alt='Daily Activity Scheduler Application'>
+<img src='image/app.png' alt='Daily Activity Scheduler Application'>
 
 Third Part Assest:
 Moment.js - was utilized to be able to set the currentDate and Time up on the jumbotron heading
