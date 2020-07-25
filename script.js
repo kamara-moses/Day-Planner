@@ -1,37 +1,55 @@
 $(document).ready(function () {
-    $('#currentDay').text(moment().format('dddd MMMM Do YYYY, h:mm:ss a'));
+    var currentHour = moment().hour();
 
-    $('.saveBtn').on('click', function () {
-        var time = $(this).parent().attr('id');
-        var activity = $(this).siblings('.input').val();
-        
-        console.log(time, text);
-        localStorage.setItem(time, activity);
-    })
-    function timeTracker() {
-        //get current number of hours.
-        var currentHour = moment().hour();
+    function getDate() {
+        $('#currentDay').text(moment().format('dddd, MMMM Do YYYY, h:mm:ss a'));  
+    };
+    
 
-        // loop over time blocks
+    function colorSchedule() {
         $('.time-block').each(function () {
-            var thisHour = parseInt($(this).attr('id').split('hour')[1]);
-            //check if we've moved past this time
-            if (thisHour < currentHour) {
+            var thisTime = parseInt($(this).attr('id'));
+            if (thisTime < currentHour) {
                 $(this).addClass('past');
+                $(this).removeClass('present');
+                $(this).removeClass('future');
             }
-            else if (thisHour === currentHour) {
+            else if (thisTime === currentHour) {
                 $(this).addClass('present');
+                $(this).removeClass('past');
+                $(this).removeClass('future');
             }
             else {
                 $(this).addClass('future');
-            }
-        })
-    }
-    timeTracker();
+                $(this).removeClass('past');
+                $(this).removeClass('present');
+            };
+        });
+    };
+    function renderStoredInputs(){
+        $('.input').each(function(){
+            var inputId = $(this).attr('id');
+            $(this).val(localStorage.getItem(inputId));
+        });
+    };
+
+    $('.saveBtn').on('click', function () {
+        var time = $(this).parent().attr('id');
+        var text = $(this).siblings('.input').val();
+
+        localStorage.setItem(time, text);
+    });
+    setInterval(getDate,1000);
+    colorSchedule();
+    setInterval(colorSchedule,1000);
+    renderStoredInputs();
+    $('#9 .input').val(localStorage.getItem('9'));
+    $('#10 .input').val(localStorage.getItem('10'));
+    $('#11 .input').val(localStorage.getItem('11'));
+    $('#12 .input').val(localStorage.getItem('12'));
+    $('#13 .input').val(localStorage.getItem('13'));
+    $('#14 .input').val(localStorage.getItem('14'));
+    $('#15 .input').val(localStorage.getItem('15'));
+    $('#16 .input').val(localStorage.getItem('16'));
+    $('#17 .input').val(localStorage.getItem('17'));
 })
-
-
-
-
-
-
