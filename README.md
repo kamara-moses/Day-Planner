@@ -2,7 +2,7 @@
 Day Scheduler
 
 Purpose:
-<h2>Scheduler</h2>
+<h2><a href='https://kamara-moses.github.io/Activity-Scheduler/'>Scheduler</a></h2>
 
 This app created yo help individual with busy schedules keep track of their daily activities.
 This app will be launched in the users web browser of choice. 
