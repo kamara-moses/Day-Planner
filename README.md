@@ -1,9 +1,11 @@
 # Activity-Scheduler
 <h1>Day Planner</h1>
 
-<h2><a href='https://kamara-moses.github.io/Activity-Scheduler/'>Scheduler</a></h2>
+
 
 <h2>Purpose</h2>
+
+<h2><a href='https://kamara-moses.github.io/Activity-Scheduler/'>Scheduler</a></h2>
 
 This application was created for individual with busy schedules. Users can utilize the application by writing what they are doing in the different time blocks. After writing the activity in the timeblock, the user can click the save button to save the activity. The user will be able to access the application using the web browser and see what activity they have saved for that given time block.
 
@@ -24,4 +26,4 @@ During the application build, I encountered some problems with color coordinatin
 
 I would like to expand the time blocks and create more of a monthly daily activity calender. I believe that with busy schedule utilize an application that lets you track activities will be beneficial for users. 
 
-    - This application is open for improvements. If you have any additions or improvement you would like to make, feel free to reach out to me or create a pull request. I welcome all ideas and improvements.
+    - This application is open for improvements.
