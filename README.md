@@ -2,7 +2,7 @@
 
 <h2>Purpose</h2>
 
-<h2><a href='https://kamara-moses.github.io/Activity-Scheduler/'>Scheduler</a></h2>
+<h2><a href='https://kamara-moses.github.io/Day-Planner/'>Scheduler</a></h2>
 
 This application was created for individual with busy schedules. Users can utilize the application by writing what they are doing in the different time blocks. After writing the activity in the timeblock, the user can click the save button to save the activity. The user will be able to access the application using the web browser and see what activity they have saved for that given time block.
 
