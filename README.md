@@ -1,7 +1,4 @@
-# Activity-Scheduler
-<h1>Day Planner</h1>
-
-
+# Day Planner
 
 <h2>Purpose</h2>
 
