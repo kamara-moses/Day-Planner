@@ -1,5 +1,5 @@
 //set the correct date and time
-$(document).ready(function () {
+$(document).ready(() => {
     var currentHour = moment().hour();
 
     setInterval(getDate);
